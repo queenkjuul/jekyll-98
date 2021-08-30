@@ -1,0 +1,29 @@
+{% include stylelink.html %}
+<link
+  rel="stylesheet"
+  href="https://unpkg.com/xp.css@/dist/98.css"
+>
+<!-- <div class="window">
+  <div class="title-bar">
+    <div class="title-bar-text">
+      {{ page.title }}
+    </div>
+    <div class="title-bar-controls">
+      <button aria-label="Minimize"></button>
+      <button aria-label="Maximize"></button>
+      <button aria-label="Close"></button>
+    </div>
+  </div>
+  <div class="window-body">
+    {{ content }}
+  </div>
+  <div class="status-bar">
+    <p class="status-bar-field">{{ page.date }}</p>
+  </div>
+</div> -->
+
+
+{% include window.html 
+  title=page.title
+  content=content
+%}

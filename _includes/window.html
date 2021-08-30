@@ -1,0 +1,22 @@
+<div class="window" style="width: {{ include.width }}">
+  <!-- title bar -->
+  {% include titlebar.html
+    title=include.title
+    help=include.help
+  %}
+
+  <!-- window body -->
+  <div class="window-body">
+
+    {{ include.content }}
+
+    {% if include.buttons %} 
+      {% include okcancel.html %}
+    {% endif %}
+
+    {% if include.statusbar %}
+      {{ include.statusbar }}
+    {% endif %}
+
+  </div>
+</div>
