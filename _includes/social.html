@@ -1,0 +1,21 @@
+{%- assign social = site.jekyll-98.social_links -%}
+
+
+{%- if social.github -%}<a class="social-icon"  rel="me" href="https://github.com/{{ social.github | cgi_escape | escape }}" title="{{ social.github | escape }}"><img src="../assets/social/github.svg" /></a>{%- endif -%}
+{%- for glb in social.gitlab -%}{%- if glb.username and glb.instance -%}<a class="social-icon"  rel="me" href="https://{{ glb.instance | cgi_escape | escape}}/{{glb.username}}" title="{{ glb.username | escape }}"><img src="../assets/social/gitlab.svg"></a>{%- endif -%}{%- endfor -%}
+{%- if social.instagram -%}<a class="social-icon"  rel="me" href="https://www.instagram.com/{{ social.instagram | cgi_escape | escape }}" title="{{ social.instagram | escape }}"><img src="../assets/social/instagram.svg"/></a>{%- endif -%}
+{%- if social.twitter -%}<a class="social-icon"  rel="me" href="https://twitter.com/{{ social.twitter | cgi_escape | escape }}" title="{{ social.twitter | escape }}"><img src="../assets/social/twitter.svg"></a>{%- endif -%}
+{%- if social.youtube -%}<a class="social-icon"  rel="me" href="https://www.youtube.com/{{ social.youtube | cgi_escape | escape }}" title="{{ social.youtube | escape }}"><img src="../assets/social/youtube.svg"></a>{%- endif -%}
+{%- if social.youtube_channel -%}<a class="social-icon"  rel="me" href="https://www.youtube.com/channel/{{ social.youtube_channel | cgi_escape | escape }}" title="{{ social.youtube_channel_name | escape | default: 'YouTube' }}"><img src="../assets/social/youtube.svg"></a>{%- endif -%}
+{%- if social.facebook -%}<a class="social-icon"  rel="me" href="https://www.facebook.com/{{ social.facebook | cgi_escape | escape }}" title="{{ social.facebook | escape }}"><img src="../assets/social/facebook.svg"></a>{%- endif -%}
+{%- if social.linkedin -%}<a class="social-icon"  rel="me" href="https://www.linkedin.com/in/{{ social.linkedin | cgi_escape | escape }}" title="{{ social.linkedin | escape }}"><img src="../assets/social/linkedin.svg"/></a>{%- endif -%}
+{%- if social.stackoverflow -%}<a class="social-icon"  rel="me" href="https://stackoverflow.com/users/{{ social.stackoverflow | cgi_escape | escape }}" title="{{ social.stackoverflow | escape }}"><img src="../assets/social/stackoverflow.svg" /></a>{%- endif -%}
+{%- if social.dribbble -%}<a class="social-icon"  rel="me" href="https://dribbble.com/{{ social.dribbble | cgi_escape | escape }}" title="{{ social.dribbble | escape }}"><img src="../assets/social/dribble.svg"></a>{%- endif -%}
+{%- if social.flickr -%}<a class="social-icon"  rel="me" href="https://www.flickr.com/photos/{{ social.flickr | cgi_escape | escape }}" title="{{ social.flickr | escape }}"><img src="../assets/social/flickr.svg"></a>{%- endif -%}
+{%- if social.pinterest -%}<a class="social-icon"  rel="me" href="https://www.pinterest.com/{{ social.pinterest | cgi_escape | escape }}" title="{{ social.pinterest | escape }}"><img src="../assets/social/pinterest.svg"></a>{%- endif -%}
+{%- for mst in social.mastodon -%}{%- if mst.username and mst.instance -%}<a class="social-icon"  rel="me" href="https://{{ mst.instance | cgi_escape | escape}}/@{{mst.username}}" title="{{ mst.username | escape }}"><img src="../assets/social/mastodon.svg"></a>{%- endif -%}{%- endfor -%}
+{%- if social.telegram -%}<a class="social-icon"  rel="me" href="https://t.me/{{ social.telegram | cgi_escape | escape }}" title="{{ social.telegram | escape }}"><img src="../assets/social/telegram.svg"></a>{%- endif -%}
+{%- if social.keybase -%}<a class="social-icon"  rel="me" href="https://keybase.io/{{ social.keybase | cgi_escape | escape }}" title="{{ social.keybase | escape }}"><img src="../assets/social/keybase.svg"></a>{%- endif -%}
+{%- if social.devto -%}<a class="social-icon"  href="https://dev.to/{{ social.devto | cgi_escape | escape }}" title="{{ social.devto | escape }}"><img src="../assets/social/devto.svg"></a>{%- endif -%}
+{%- if social.email -%}<a class="social-icon"  href="mailto:{{ social.email | cgi_escape | escape }}" title="{{ social.email | escape }}"><img src="../assets/social/Mail.png"/></a>{%- endif -%}
+

@@ -1,0 +1,62 @@
+title: Your awesome title
+author:
+  name: GitHub User
+  email: your-email@domain.com
+description: > # this means to ignore newlines until "show_excerpts:"
+  Write an awesome description for your new site here. You can edit this
+  line in _config.yml. It will appear in your document head meta (for
+  Google search results) and in your feed.xml site description.
+
+show_excerpts: false # set to true to show excerpts on the homepage
+
+# jekyll-98 date format
+# refer to https://shopify.github.io/liquid/filters/date/ if you want to customize this
+jekyll-98:
+  date_format: "%b %-d, %Y"
+
+  # site_links generate desktop icons (if device width allows)
+  # as well as entries in the Start menu (all widths)
+  # must have at least title and url
+  # icon will default to "document"
+  # see assets/icons for choices
+  site_links:
+  - title: Example 
+    url: http://example.com
+    icon: html
+    alt: 'This is an example button that goes to a fake URL'
+
+  # generate social links in footer
+  social_links:
+    # twitter: jekyllrb
+    # github:  jekyll
+    # devto: jekyll
+    # dribbble: jekyll
+    # facebook: jekyll
+    # flickr:   jekyll
+    # instagram: jekyll
+    # linkedin: jekyll
+    # pinterest: jekyll
+    # youtube: jekyll
+    # youtube_channel: UC8CXR0-3I70i1tfPg1PAE1g
+    # youtube_channel_name: CloudCannon
+    # telegram: jekyll
+    # googleplus: +jekyll
+    # keybase: jekyll
+    # email: jekyll@jekyll.jekyll
+
+    # Mastodon instances
+    # mastodon:
+    # - username: jekyll
+    #   instance: example.com
+    # - username: jekyll2
+    #   instance: example.com
+
+    # GitLab instances
+    # gitlab:
+    # - username: jekyll
+    #   instance: example.com
+    # - username: jekyll2
+    #   instance: example.com
+
+# Build settings
+theme: jekyll-98
