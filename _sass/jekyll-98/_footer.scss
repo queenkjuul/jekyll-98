@@ -133,9 +133,19 @@ label[aria-label="Start"], button[aria-label="Start"] {
 .social-icon {
   height: 18px;
   width: 18px;
+  padding: 1px 2px 2px 2px;
+  // padding: 2px;
+
+
 
   & > img {
     @extend .social-icon;
+    &:hover {
+      border-right: 1px solid slategrey;
+      border-bottom: 1px solid slategray;
+      border-left: 1px solid white;
+      padding: 1px;
+    }
   }
 
 }

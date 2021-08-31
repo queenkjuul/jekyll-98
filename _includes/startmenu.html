@@ -1,0 +1,65 @@
+<script>
+  function closeStart() {
+    document.getElementById('start').checked = false;
+  }
+</script>
+
+<nav id="start-menu-nav">
+  <label 
+  class="window" 
+  aria-label="Start" 
+  for="start"
+  >
+    <img src="../assets/icons/start.png"/>
+    Start
+  </label>
+  <input type="checkbox" id="start"/>
+
+  <div id="start-menu-close" onclick="closeStart()"></div>
+  <div id="start-menu-items" class="window">
+    <div class="start-menu-banner"></div>
+
+    <div>
+      {% include start-menu-item.html
+        url="/"
+        title=site.title
+        icon="computer"
+        alt="Go back to homepage"
+      %}
+  
+      {%- if site.posts.size > 0 -%}
+        {% include start-menu-item.html
+          url="/posts"
+          title="Posts"
+          icon="documents"
+          alt="Browse blog posts"
+        %}
+      {%- endif -%}
+  
+      {%- for link in site.jekyll-98.site_links -%}
+        {%- if link.title and link.url -%}
+          {% include start-menu-item.html
+            url=link.url 
+            title=link.title 
+            icon=link.icon 
+            alt=link.alt
+          %}
+        {%- endif -%}
+      {%- endfor -%}
+
+      {% include start-menu-item.html 
+        url="/contact"
+        title="Contact Information"
+        icon="contact"
+        alt="How to contact the author"
+      %}
+
+      {% include start-menu-item.html 
+        url="/about"
+        title="About"
+        icon="info"
+        alt="Information about this site"
+      %}
+    </div>
+  </div>
+</nav>
