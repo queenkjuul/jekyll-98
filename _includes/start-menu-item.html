@@ -1,0 +1,12 @@
+<a href="{{ include.url }}">
+  <div class="start-menu-item">
+    <img src="../assets/icons/{{ include.icon | default: 'document' }}.png"
+    alt="{{ inlcude.alt }}" />
+    <div class="start-menu-item__title">
+      {{ include.title }}
+    </div>
+    <div class="start-menu-item__alt">
+      {{ include.alt }}
+    </div>
+  </div>
+</a>

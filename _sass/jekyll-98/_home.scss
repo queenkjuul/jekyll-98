@@ -1,0 +1,49 @@
+.home {
+  display: flex;
+  & .window {
+    margin: 16px;
+  }
+  & .window-body {
+    padding: 16px;
+  }
+}
+
+.desktop {
+  background-color: #008080;
+}
+
+.desktop-icons {
+  display: flex;
+  flex-direction: column;
+  // margin: 16px;
+
+  & a {
+    text-decoration: none;
+    color: black;
+  }
+
+}
+
+.desktop-icon {
+  margin: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  width: 96px;
+  max-width: 96px;
+  max-height: 64px;
+  height: 64px;
+
+  & img {
+    width: 48px;
+    height: 48px;
+  }
+
+  & figcaption {
+    font-family: 'Pixelated MS Sans Serif';
+    margin-top: 8px;
+  }
+
+}

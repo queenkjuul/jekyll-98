@@ -1,0 +1,141 @@
+// root taskbar "window"
+.taskbar {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+// Start button
+label[aria-label="Start"], button[aria-label="Start"] {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  width: 56px;
+  height: 23px;
+  max-height: 23px;
+  max-width: 56px;
+  padding: 0 4px;
+  margin: 0px 4px 0px 0px;
+
+  font-weight: bold;
+  text-align: left;
+  font-size: 11px;
+
+  & > img {
+    max-width: 16px;
+    margin-right: 4px;
+  }
+}
+
+// wrapper containing menu entries
+#start-menu-items a {
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  text-decoration: none;
+  color: black;
+
+  &:hover {
+    color: white;
+    background-color: navy;
+  }
+}
+
+/* TOGGLE SHOW/HIDE MENU */
+#start-menu-items { display: none; }
+#start-menu-close { display: none; }
+
+// start menu while opened
+#start-menu-nav input:checked ~ #start-menu-items { 
+  display: grid; 
+  position: absolute;
+  bottom: 30px;
+  left: 0px;
+  min-height: 300px;
+  width: 200px;
+  grid-template-columns: 21px 1fr;
+}
+
+#start-menu-nav input:checked ~ #start-menu-close {
+  display: block;
+  position: absolute;
+  top: -100vh;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  min-height: 100vh;
+  min-width: 100vw;}
+
+.start-menu-banner {
+  width: 21px;
+  height: 100%;
+  background-color: navy;
+  background-image: url('../../assets/icons/98banner.png');
+  background-position-y: bottom;
+  background-repeat: no-repeat;
+}
+
+.start-menu-item {
+  display: grid;
+  grid-template-areas:
+    "icon title"
+    "icon alt";
+  
+  grid-template-rows: 24px 16px;
+  grid-template-columns: 32px 1fr;
+  column-gap: 8px;
+
+  border-bottom: 2px groove;
+
+  & img {
+    grid-area: icon;
+    width: 32px;
+    height: 32px;
+    // margin: 4px;
+    margin: auto;
+    margin-left: 4px;
+  }
+
+  &__title {
+    grid-area: title;
+    font-size: 12px;
+    font-weight: bold;
+    margin: 4px;
+    padding-top: 4px;
+  }
+
+  &__alt {
+    grid-area: alt;
+    font-size: 11px;
+    margin-left: 4px;
+  }
+}
+
+.social-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  height: 23px;
+
+  & > * {
+    margin: 0px 4px;
+  }
+}
+
+.social-icon {
+  height: 18px;
+  width: 18px;
+
+  & > img {
+    @extend .social-icon;
+  }
+
+}

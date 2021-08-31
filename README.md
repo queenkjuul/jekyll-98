@@ -1,24 +1,19 @@
-some icons from https://github.com/bearlike/Pixel-Portfolio-Webite/tree/master/assets/img/icons
-
-some work from minima
-
-
-
 # jekyll-98
 
-Welcome to your new Jekyll theme! In this directory, you'll find the files you need to be able to package up your theme into a gem. Put your layouts in `_layouts`, your includes in `_includes`, your sass files in `_sass` and any other assets in `assets`.
+A theme for Jekyll built using the [XP.css](https://github.com/botoxparty/XP.css) fork of [98.css](https://github.com/jdan/98.css) which aims to recreate the aesthetics of Windows 98 in a usable, customizable blog format. 
 
-To experiment with this code, add some sample content and run `bundle exec jekyll serve` – this directory is setup just like a Jekyll site!
-
-TODO: Delete this and the text above, and describe your gem
-
+The goal was to avoid JavaScript, and there is only one line of javascript in the theme. if you can tell me how to get rid of it, please do. 
 
 ## Installation
+
+in your blog root folder, create a directory `_theme`
+
+`cd` into `_theme` and clone this repo into it
 
 Add this line to your Jekyll site's `Gemfile`:
 
 ```ruby
-gem "jekyll-98"
+gem "jekyll-98", :path => "_themes"
 ```
 
 And add this line to your Jekyll site's `_config.yml`:
@@ -41,7 +36,7 @@ TODO: Write usage instructions here. Describe your available layouts, includes, 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/hello. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/queenkjuul/hello. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 ## Development
 
@@ -56,3 +51,8 @@ To add a custom directory to your theme-gem, please edit the regexp in `jekyll-9
 
 The theme is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
 
+
+<!-- some work from minima
+social icons from https://github.com/edent/SuperTinyIcons
+credit Alex Meub https://win98icons.alexmeub.com/
+create license page -->
