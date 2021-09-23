@@ -69,8 +69,3 @@ jekyll-98:
 
 # Build settings
 theme: jekyll-98
-
-include:
-  - 404.html
-  - about.html
-  - contact.html
