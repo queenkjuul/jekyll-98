@@ -1,4 +1,5 @@
 <script>
+  // if you're reading this and you know how to accomplish this without js, please let me know!
   function closeStart() {
     document.getElementById('start').checked = false;
   }
@@ -14,16 +15,15 @@
     Start
   </label>
   <input type="checkbox" id="start"/>
-
   <div id="start-menu-close" onclick="closeStart()"></div>
   <div id="start-menu-items" class="window">
     <div class="start-menu-banner"></div>
 
     <div>
-      {% include start-menu-item.html
+      {% include start-menu-item.html 
         url="/"
         title=site.title
-        icon="computer"
+        icon=site.jekyll-98.icon
         alt="Go back to homepage"
       %}
   

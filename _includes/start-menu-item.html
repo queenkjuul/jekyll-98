@@ -1,7 +1,11 @@
 <a href="{{ include.url }}">
   <div class="start-menu-item">
-    <img src="../assets/icons/{{ include.icon | default: 'document' }}.png"
-    alt="{{ inlcude.alt }}" />
+    {% if include.url == "/" %}
+      <img src="../assets/icons/{{ include.icon | default: 'computer' }}.png" alt="{{ include.alt }}" />
+    {% else %}
+      <img src="../assets/icons/{{ include.icon | default: 'document' }}.png"
+      alt="{{ include.alt }}" />
+    {% endif %}
     <div class="start-menu-item__title">
       {{ include.title }}
     </div>

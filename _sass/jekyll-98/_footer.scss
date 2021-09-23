@@ -149,3 +149,73 @@ label[aria-label="Start"], button[aria-label="Start"] {
   }
 
 }
+
+.systray {
+  display: flex;
+  min-height: 18px;
+  height: 18px;
+  align-self: center;
+  justify-content: center;
+  align-items: center;
+  margin-right: 4px !important;
+}
+
+.stendo {
+  width: 100%;
+  flex-grow: 1;
+}
+
+.trayicon {
+  width: 16px;
+  height: 16px;
+  margin: 2px;
+}
+
+.systray-balloon {
+  display: none;
+
+  & img {
+    width: 18px;
+    height: 18px;
+    align-self: center;
+    margin: auto;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+
+  }
+
+  &__header {
+    color: black;
+    padding: 16px 8px;
+    font-weight: bold;
+    font-size: 14px;
+    text-align: left;
+
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+
+    & a {
+      text-decoration: none;
+      color: black;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__content {
+    grid-column: 1 / 3;
+    grid-row: 2 / 3;
+  }
+}
+
+.has-tooltip:hover + .systray-balloon {
+  display: grid;
+  background-color: #F2F2D6;
+  border-radius: 5px;
+  position: absolute;
+  bottom: 34px;
+  right: 12px;
+  padding: 0px 16px 16px;
+}

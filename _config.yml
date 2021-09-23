@@ -5,7 +5,8 @@ author:
 description: > # this means to ignore newlines until "show_excerpts:"
   Write an awesome description for your new site here. You can edit this
   line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  Google search results) and in your feed.xml site description. 
+  It will also appear on the site About page. 
 
 show_excerpts: false # set to true to show excerpts on the homepage
 
@@ -13,6 +14,13 @@ show_excerpts: false # set to true to show excerpts on the homepage
 # refer to https://shopify.github.io/liquid/filters/date/ if you want to customize this
 jekyll-98:
   date_format: "%b %-d, %Y"
+
+  # select site icon which will be used for homepage links 
+  # on the desktop and in the start menu
+  # will also appear on site About page 
+  # see assets/icons for choices, omit extension
+  
+  # icon: computer-2k
 
   # site_links generate desktop icons (if device width allows)
   # as well as entries in the Start menu (all widths)
@@ -27,8 +35,10 @@ jekyll-98:
 
   # generate social links in footer
   social_links:
+    github:  queenkjuul
+    youtube: queenkjuul69
+    twitch: queenkjuul
     # twitter: jekyllrb
-    # github:  jekyll
     # devto: jekyll
     # dribbble: jekyll
     # facebook: jekyll
@@ -36,7 +46,6 @@ jekyll-98:
     # instagram: jekyll
     # linkedin: jekyll
     # pinterest: jekyll
-    # youtube: jekyll
     # youtube_channel: UC8CXR0-3I70i1tfPg1PAE1g
     # youtube_channel_name: CloudCannon
     # telegram: jekyll
@@ -60,3 +69,8 @@ jekyll-98:
 
 # Build settings
 theme: jekyll-98
+
+include:
+  - 404.html
+  - about.html
+  - contact.html

@@ -8,4 +8,7 @@ dl, dd, ol, ul, figure {
   padding: 0;
 } 
 
-
+* {
+  font-smooth: never;
+  -webkit-font-smoothing: none;
+}
