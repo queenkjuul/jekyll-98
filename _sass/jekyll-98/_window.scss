@@ -1,0 +1,22 @@
+.title-bar {
+
+  &__icon {
+    width: 12px;
+    height: 12px;
+    margin-right: 4px;
+    position: relative;
+    top: 2px;
+  }
+}
+
+.error {
+  margin: 16px;
+  width: 50%;
+
+  &__icon {
+    width: 32px;
+    height: 32px;
+    margin: 16px;
+
+  }
+}

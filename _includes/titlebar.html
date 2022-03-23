@@ -1,5 +1,8 @@
 <div class="title-bar">
   <div class="title-bar-text">
+  {%- if include.icon -%}
+    <img src="../assets/icons/{{ include.icon }}.png" class="title-bar__icon"/>
+  {%- endif -%}
     {{ include.title }}
   </div>
   <div class="title-bar-controls">

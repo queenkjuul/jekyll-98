@@ -2,4 +2,14 @@
 layout: default
 ---
 
-{{ content }}
+<div class="window error">
+  {% include titlebar.html 
+    title="404 - Page Not Found - Microsoft Internet Explorer"
+    icon="error"
+  %}
+
+  <img src="../assets/icons/error.png" class="error__icon" />
+  
+  {{ content }}
+  {% include okcancel.html -%}
+</div>

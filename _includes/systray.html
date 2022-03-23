@@ -1,5 +1,18 @@
+<!-- because this is a cheesy Windows 98 theme, include cheesy Windows 98 sound  -->
+<audio id="sound">
+  <source src="../assets/98sound.wav" type="audio/wav">
+</audio>
+<script>
+  function playSound() {
+    document.getElementById("sound").play();
+  }
+</script>
+
 <div class="status-bar">
   <div class="systray status-bar-field">
+    <!-- <a onclick="playSound()" class="has-tooltip"> -->
+      <img src="../assets/icons/sound.png" onclick="playSound()" class="trayicon">
+    <!-- </a> -->
     <a href="/about" class="has-tooltip">
       <img src="../assets/icons/help_small.png" class="trayicon" 
       aria-label="
