@@ -8,7 +8,18 @@ description: > # this means to ignore newlines until "show_excerpts:"
   Google search results) and in your feed.xml site description. 
   It will also appear on the site About page. 
 
-show_excerpts: false # set to true to show excerpts on the homepage
+plugins:
+  - jekyll-paginate
+  - jekyll-archives
+
+show_excerpts: false # works (mostly) but applies all formatting from post...not sure how to fix
+paginate:      false # set to max posts per page for pagination of post list
+paginate_path: /page:num # probably shouldn't touch
+
+jekyll-archives:
+  enabled: categories
+  layout: posts
+  permalinks: '/category/:name'
 
 # jekyll-98 date format
 # refer to https://shopify.github.io/liquid/filters/date/ if you want to customize this
@@ -30,8 +41,9 @@ jekyll-98:
   site_links:
   - title: Example 
     url: http://example.com
-    icon: html
-    alt: 'This is an example button that goes to a fake URL'
+    target: _blank            # optional
+    icon: html                # optional
+    alt: 'This is an example' # text will not wrap in start menu; super long alt might make start menu look silly
 
   # generate social links in footer
   social_links:

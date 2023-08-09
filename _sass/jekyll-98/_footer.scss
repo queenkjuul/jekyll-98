@@ -58,7 +58,8 @@ label[aria-label="Start"], button[aria-label="Start"] {
   bottom: 30px;
   left: 0px;
   min-height: 300px;
-  width: 200px;
+  min-width: 200px;
+  max-width: 1/3;
   grid-template-columns: 21px 1fr;
 }
 

@@ -1,0 +1,58 @@
+{% if site.paginate %} 
+  {% assign posts = paginator.posts %} 
+{% else %} 
+  {% assign posts = site.posts %} 
+{% endif %}
+
+{%- if posts.size > 0 -%} 
+  <ul class="post-list tree-view">
+    {%- assign date_format = site.jekyll-98.date_format | default: "%b %-d, %Y" -%} 
+    {%- for post in posts -%}
+      {% assign icon = post.icon | default: "document" %}
+      <li class="post-list-wrapper">
+        <a class="post-list-item" href="{{ post.url | relative_url }}">
+          <img class="post-list-icon" src="/assets/icons/{{ icon }}.png" alt="{{post.title}}" />
+          <div class="post-link">{{ post.title | escape }}</div>
+          <div class="post-meta">{{ post.date | date: date_format }}</div>
+          {%- if site.show_excerpts -%} 
+            <div class="post-excerpt">{{ post.excerpt }}</div> 
+          {%- endif -%}
+        </a>
+        {%- if site.show_categories and post.categories.size > 0 -%}
+          <div class="post-tags">
+            <div class="post-categories-label">Categories: </div>
+            {%for tag in post.categories %}
+              <a class="post-tag" >{{tag}}</a>
+            {% endfor %}
+          </div>
+        {% else %}
+          <div style="margin: 6px;" />
+        {%- endif -%}
+      </li>
+    {%- endfor -%}
+  </ul>
+
+  {% if site.paginate %}
+    <div class="pager">
+      {%- if paginator.previous_page %}
+          <a
+            href="{{ paginator.previous_page_path | relative_url }}"
+            class="previous-page"
+            ><button>Page {{ paginator.previous_page }}</button></a
+          >
+      {%- else %}
+        <button class="pager-edge" disabled>First Page</button>
+      {%- endif %}
+        <button class="current-page">{{ paginator.page }}</button>
+      {%- if paginator.next_page %}
+        <a
+          href="{{ paginator.next_page_path | relative_url }}"
+          class="next-page"
+          ><button>Page {{ paginator.next_page }}</button></a
+        >
+      {%- else %}
+        <button class="pager-edge" disabled>Last Page</button>
+      {%- endif %}
+    </div>
+  {%- endif %} 
+{%- endif -%}

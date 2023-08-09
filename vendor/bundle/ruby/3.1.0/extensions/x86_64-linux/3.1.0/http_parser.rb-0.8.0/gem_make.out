@@ -1,0 +1,16 @@
+current directory: /home/qkj/queenkjuul.com/_themes/jekyll-98/vendor/bundle/ruby/3.1.0/gems/http_parser.rb-0.8.0/ext/ruby_http_parser
+/usr/bin/ruby3.1 -I /usr/lib/ruby/vendor_ruby -r ./siteconf20230809-179191-eiag69.rb extconf.rb
+creating Makefile
+
+current directory: /home/qkj/queenkjuul.com/_themes/jekyll-98/vendor/bundle/ruby/3.1.0/gems/http_parser.rb-0.8.0/ext/ruby_http_parser
+make DESTDIR\= clean
+
+current directory: /home/qkj/queenkjuul.com/_themes/jekyll-98/vendor/bundle/ruby/3.1.0/gems/http_parser.rb-0.8.0/ext/ruby_http_parser
+make DESTDIR\=
+compiling ruby_http_parser.c
+compiling ryah_http_parser.c
+linking shared-object ruby_http_parser.so
+
+current directory: /home/qkj/queenkjuul.com/_themes/jekyll-98/vendor/bundle/ruby/3.1.0/gems/http_parser.rb-0.8.0/ext/ruby_http_parser
+make DESTDIR\= install
+/usr/bin/install -c -m 0755 ruby_http_parser.so ./.gem.20230809-179191-pj0gyp

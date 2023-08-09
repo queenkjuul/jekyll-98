@@ -31,3 +31,9 @@ $on-large:         $on-laptop !default;
   "jekyll-98/layout",           // Defines structure and style based on CSS selectors.
   "jekyll-98/custom-styles"     // Hook to override existing styles.
 ;
+
+@include media-query($on-palm) {
+  .hide-on-phone {
+    display: none;
+  }
+}
