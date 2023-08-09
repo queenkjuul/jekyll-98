@@ -1,16 +1,17 @@
 <a href="{{ include.url }}">
   <div class="start-menu-item">
     {% if include.url == "/" %}
-      <img src="../assets/icons/{{ include.icon | default: 'computer' }}.png" alt="{{ include.alt }}" />
+    <img
+      src="/assets/icons/{{ include.icon | default: 'computer' }}.png"
+      alt="{{ include.alt }}"
+    />
     {% else %}
-      <img src="../assets/icons/{{ include.icon | default: 'document' }}.png"
-      alt="{{ include.alt }}" />
+    <img
+      src="/assets/icons/{{ include.icon | default: 'document' }}.png"
+      alt="{{ include.alt }}"
+    />
     {% endif %}
-    <div class="start-menu-item__title">
-      {{ include.title }}
-    </div>
-    <div class="start-menu-item__alt">
-      {{ include.alt }}
-    </div>
+    <div class="start-menu-item__title">{{ include.title }}</div>
+    <div class="start-menu-item__alt">{{ include.alt }}</div>
   </div>
 </a>
