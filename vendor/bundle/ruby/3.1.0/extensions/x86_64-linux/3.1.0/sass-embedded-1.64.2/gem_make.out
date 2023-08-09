@@ -1,5 +1,0 @@
-current directory: /home/qkj/queenkjuul.com/_themes/jekyll-98/vendor/bundle/ruby/3.1.0/gems/sass-embedded-1.64.2/ext/sass
-/usr/bin/ruby3.1 -I/usr/lib/ruby/vendor_ruby -rrubygems /home/qkj/queenkjuul.com/_themes/jekyll-98/vendor/bundle/ruby/3.1.0/gems/rake-13.0.6/exe/rake RUBYARCHDIR\=/home/qkj/queenkjuul.com/_themes/jekyll-98/vendor/bundle/ruby/3.1.0/extensions/x86_64-linux/3.1.0/sass-embedded-1.64.2 RUBYLIBDIR\=/home/qkj/queenkjuul.com/_themes/jekyll-98/vendor/bundle/ruby/3.1.0/extensions/x86_64-linux/3.1.0/sass-embedded-1.64.2
-gem install --force --install-dir /home/qkj/queenkjuul.com/_themes/jekyll-98/vendor/bundle/ruby/3.1.0/gems/sass-embedded-1.64.2/ext/sass/ruby --no-document --ignore-dependencies --platform x86_64-linux-gnu --version 1.64.2 sass-embedded
-cp -r /home/qkj/queenkjuul.com/_themes/jekyll-98/vendor/bundle/ruby/3.1.0/gems/sass-embedded-1.64.2/ext/sass/ruby/gems/sass-embedded-1.64.2-x86_64-linux/ext/sass/dart-sass dart-sass
-rm -rf /home/qkj/queenkjuul.com/_themes/jekyll-98/vendor/bundle/ruby/3.1.0/gems/sass-embedded-1.64.2/ext/sass/ruby
