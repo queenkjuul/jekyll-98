@@ -3,6 +3,13 @@
 
   & .window {
     margin-bottom: 128px;
+    margin-top: 32px;
+    max-width: 50%;
+
+    @include media-query($on-palm) {
+      margin-right: 0px;
+      max-width: 100%;
+    }
   }
 
   & .status-bar {

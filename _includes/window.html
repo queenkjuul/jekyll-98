@@ -1,4 +1,4 @@
-<div class="window" style="width: {{ include.width }}">
+<div class="window {{ include.class }}" style="width: {{ include.width }}; {{ include.style }}">
   <!-- title bar -->
   {% include titlebar.html
     title=include.title
