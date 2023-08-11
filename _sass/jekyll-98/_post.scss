@@ -3,7 +3,7 @@
 
   & .window {
     margin-bottom: 128px;
-    margin-top: 32px;
+    margin-top: 16px;
     max-width: 50%;
 
     @include media-query($on-palm) {
@@ -23,8 +23,13 @@
 }
 
 .post-content {
+  & * {
+    font-size: 1rem;
+  }
+
   & h1, h2, h3, h4, h5, h6 {
-    margin-top: 8px;
+    margin-top: 16px;
+    margin-bottom: 8px;
   }
 
   & h1 {
@@ -57,8 +62,21 @@
   }
 
   & p {
-    font-size: 1rem; 
     margin-top: 12px;
     margin-bottom: 12px;
+  }
+
+  & code {
+    font-family: "Perfect DOS VGA 437 Win";
+    font-size: 1.15rem;
+  }
+
+  & pre {
+    overflow: scroll;
+  }
+
+  & .highlighter-rouge {
+    margin-top: 12px;
+    margin-bottom: 16px;
   }
 }

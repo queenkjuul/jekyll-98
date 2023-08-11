@@ -15,7 +15,7 @@
           <div class="post-link">{{ post.title | escape }}</div>
           <div class="post-meta">{{ post.date | date: date_format }}</div>
           {%- if site.show_excerpts -%} 
-            <div class="post-excerpt">{{ post.excerpt }}</div> 
+            <div class="post-excerpt">{{ post.excerpt | strip_html }}</div> 
           {%- endif -%}
         </a>
         {%- if site.show_categories and post.categories.size > 0 -%}

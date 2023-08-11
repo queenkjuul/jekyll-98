@@ -1,30 +1,30 @@
+# plugins - be careful
+plugins:
+  - jekyll-paginate       # theme default
+  - jekyll-archives       # theme-default
+  - jekyll-feed           # theme-default
+
+# About your website
 title: Your awesome title
 author:
-  name: GitHub User
-  email: your-email@domain.com
-description: > # this means to ignore newlines until "show_excerpts:"
+  name: &name GitHub User                 # removing &name breaks contact page
+  email: &email your-email@domain.com     # removing &email breaks contact page
+description: > # > means to ignore newlines until next section
   Write an awesome description for your new site here. You can edit this
   line in _config.yml. It will appear in your document head meta (for
   Google search results) and in your feed.xml site description. 
   It will also appear on the site About page. 
 
-plugins:
-  - jekyll-paginate
-  - jekyll-archives
+# settings
+show_excerpts: false      # mostly works, see README
+paginate:      3          # set to a number of posts per page 
+                          # only 3 works well on mobile
+                          # set to false to disable pagination (all posts listed on home page)
+paginate_path: /page/:num # probably shouldn't touch
 
-show_excerpts: false # works (mostly) but applies all formatting from post...not sure how to fix
-paginate:      false # set to max posts per page for pagination of post list
-paginate_path: /page:num # probably shouldn't touch
-
-jekyll-archives:
-  enabled: categories
-  layout: posts
-  permalinks: '/category/:name'
-
-# jekyll-98 date format
-# refer to https://shopify.github.io/liquid/filters/date/ if you want to customize this
+# theme settings
 jekyll-98:
-  date_format: "%b %-d, %Y"
+  date_format: "%b %-d, %Y" # refer to https://shopify.github.io/liquid/filters/date/ if you want to customize this
 
   # select site icon which will be used for homepage links 
   # on the desktop and in the start menu
@@ -33,17 +33,17 @@ jekyll-98:
   
   # icon: computer-2k
 
-  # site_links generate desktop icons (if device width allows)
+  # site_links generate desktop icons (home page and post pages if device width allows)
   # as well as entries in the Start menu (all widths)
   # must have at least title and url
   # icon will default to "document"
-  # see assets/icons for choices
+  # see assets/icons for icon choices
   site_links:
   - title: Example 
     url: http://example.com
     target: _blank            # optional
     icon: html                # optional
-    alt: 'This is an example' # text will not wrap in start menu; super long alt might make start menu look silly
+    alt: 'This is an example' # alt text is shown in start menu - long strings won't wrap and might break menu
 
   # generate social links in footer
   social_links:
@@ -79,5 +79,46 @@ jekyll-98:
     # - username: jekyll2
     #   instance: example.com
 
-# Build settings
-theme: jekyll-98
+  # social links from the social_links section are automatically added to contact page (if enabled)
+  # only defined fields are shown
+  contact:        # comment to omit
+    name: *name   # reuses values from above
+    email: *email
+  # phone: phone number if you're spicy
+  # address: 
+    # - 1234 Street Avenue
+    # - Assigned living quarters number X
+    # - City, Unit bigger than city, country, postal related code 
+    # - You can actually add as many lines as your little heart desires
+  # other:
+  #   - custom info can go here
+  #   - each line gets rendered
+  #   - layout not optimized for long lists
+
+  # you can add additional information to the About page, each line appears in a bulleted list
+  # about:
+  #   - I'm actually really cool 
+
+  # about page - add personal details to about page if you like
+  about:
+    - Live long and prosper, loves \\//_
+
+# Build settings - add to your site's _config.yml
+# theme: jekyll-98
+
+# plugin settings
+jekyll-archives:
+  enabled: categories
+  layout: posts
+
+# defaults - probably don't touch
+defaults:
+  -
+    scope:
+      path: "_posts"
+    values:
+      layout: "post"
+  
+# don't touch
+include:
+  - _pages
