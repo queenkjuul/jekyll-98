@@ -1,3 +1,6 @@
+{%if page.paginator %}
+  {% assign paginator = page.paginator %}
+{% endif %}
 {% if site.paginate %} 
   {% assign posts = paginator.posts %} 
 {% else %} 
@@ -36,7 +39,7 @@
     <div class="pager">
       {%- if paginator.previous_page %}
           <a
-            href="{{ paginator.previous_page_path | relative_url }}"
+            href="{{ paginator.previous_page_path }}"
             class="previous-page"
             ><button>Page {{ paginator.previous_page }}</button></a
           >
@@ -46,7 +49,7 @@
         <button class="current-page">{{ paginator.page }}</button>
       {%- if paginator.next_page %}
         <a
-          href="{{ paginator.next_page_path | relative_url }}"
+          href="{{ paginator.next_page_path }}"
           class="next-page"
           ><button>Page {{ paginator.next_page }}</button></a
         >

@@ -36,6 +36,12 @@ jekyll-98:
   
   # icon: computer-2k
 
+  # select which of your post categories should have its own desktop icon
+  # should probably try and keep total icons (desktop_categories and site_links)
+  # to 7 or less total
+  desktop_categories:
+    - posts
+
   # site_links generate desktop icons (home page and post pages if device width allows)
   # as well as entries in the Start menu (all widths)
   # must have at least title and url
@@ -105,13 +111,15 @@ jekyll-98:
 # Build settings - add to your site's _config.yml
 # theme: jekyll-98
 
-# defaults - probably don't touch
+# defaults - probably don't touch, except for category
 defaults:
   -
     scope:
       path: "_posts"
     values:
       layout: "post"
+      categories:
+        - posts
   
 # don't touch
 collections:

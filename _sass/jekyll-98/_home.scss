@@ -2,6 +2,7 @@
   display: flex;
   & .window {
     margin: 16px;
+    height: fit-content;
   }
   & .window-body {
     padding: 16px;

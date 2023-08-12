@@ -1,6 +1,3 @@
----
-categories: test
----
 # jekyll-98
 
 A theme for Jekyll built using the [XP.css](https://github.com/botoxparty/XP.css) fork of [98.css](https://github.com/jdan/98.css) which aims to recreate the aesthetics of Windows 98 in a usable, customizable blog format.
@@ -142,6 +139,14 @@ jekyll-98:
 #### `date_format`
 
 change how timestamps are shown - refer to [https://shopify.github.io/liquid/filters/date/](https://shopify.github.io/liquid/filters/date/) if you want to customize this
+
+#### `icon`
+
+you can define a different icon to use for the "my computer" homepage icon on the desktop here.
+
+#### `desktop_categories`
+
+Categories defined in this array will generate desktop icons and start menu links, assuming there are posts that exist that are tagged with that category. Note that things might get weird layout wise if you have more than 5-7 desktop icons total (`desktop_categories` and `site_links` combined)
 
 #### `site_links`
 
