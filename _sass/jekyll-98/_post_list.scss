@@ -9,6 +9,7 @@
   display: grid;
   grid-template-columns: 1fr 6fr;
   grid-template-rows: 1 1;
+  grid-gap: 8px 0px;
 }
 
 .post-list-item {
@@ -17,6 +18,7 @@
   grid-row: 1;
   grid-template-columns: 1fr 6fr;
   grid-template-rows: 1fr 1 1; 
+  grid-gap: 4px 0px;
 }
 
 .post-list-icon {
@@ -55,6 +57,13 @@
   gap: 4px;
   grid-row: 2;
   grid-column: 2 /3;
+}
+
+.post-tag {
+  &:hover {
+    color: blue;
+    text-decoration: underline;
+  }
 }
 
 .post-categories-label {

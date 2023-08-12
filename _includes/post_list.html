@@ -22,7 +22,7 @@
           <div class="post-tags">
             <div class="post-categories-label">Categories: </div>
             {%for tag in post.categories %}
-              <a class="post-tag" >{{tag}}</a>
+              <a class="post-tag" href="/category/{{tag}}">{{tag}}</a>
             {% endfor %}
           </div>
         {% else %}

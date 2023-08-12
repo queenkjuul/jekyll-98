@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: default
 permalink: /about.html
 ---
 
@@ -12,8 +12,7 @@ permalink: /about.html
   <li>{{ info }}</li>
   {% endfor %}
 </ul>
-{% include about-text.html %}
-
+{% include about_text.html %}
 {% endcapture %}
 
 {%include window.html width="250px" style="margin: 16px" title=site.title content=abouttext buttons=false statusbar=false %}

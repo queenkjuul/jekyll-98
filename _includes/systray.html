@@ -10,9 +10,10 @@
 
 <div class="status-bar">
   <div class="systray status-bar-field">
-    <!-- <a onclick="playSound()" class="has-tooltip"> -->
-      <img src="/assets/icons/sound.png" onclick="playSound()" class="trayicon">
-    <!-- </a> -->
+    <a href="/feed.xml">
+      <img src="/assets/icons/feed.png" style="margin-top: 5px" class="trayicon" aria-label="Link to atom feed of posts" />
+    </a>
+    <img src="/assets/icons/sound.png" onclick="playSound()" class="trayicon">
     <a href="/about" class="has-tooltip">
       <img src="/assets/icons/help_small.png" class="trayicon" 
       aria-label="
@@ -27,7 +28,7 @@
       ">
     </a>
     <div class="systray-balloon">
-      {% include about-text.html %}
+      {% include about_text.html %}
     </div>
     {{ site.time | date: '%H:%M'}}
   </div>

@@ -1,12 +1,12 @@
 # plugins - be careful
 plugins:
   - jekyll-paginate       # theme default
-  - jekyll-archives       # theme-default
+  - jekyll-category-pages # theme-default
   - jekyll-feed           # theme-default
 
 # About your website
 title: Your awesome title
-author:
+author: # *** NAME AND EMAIL INCLUDED IN RSS FEED BY DEFAULT ***
   name: &name GitHub User                 # removing &name breaks contact page
   email: &email your-email@domain.com     # removing &email breaks contact page
 description: > # > means to ignore newlines until next section
@@ -14,13 +14,16 @@ description: > # > means to ignore newlines until next section
   line in _config.yml. It will appear in your document head meta (for
   Google search results) and in your feed.xml site description. 
   It will also appear on the site About page. 
+# url:  http://yourdomain.com             # will try to use github pages url if omitted
 
 # settings
-show_excerpts: false      # mostly works, see README
+show_excerpts: true      # mostly works, see README
+show_categories: true
 paginate:      3          # set to a number of posts per page 
                           # only 3 works well on mobile
                           # set to false to disable pagination (all posts listed on home page)
 paginate_path: /page/:num # probably shouldn't touch
+# google_analytics:       # input your google analytics key for tracking
 
 # theme settings
 jekyll-98:
@@ -95,21 +98,12 @@ jekyll-98:
   #   - each line gets rendered
   #   - layout not optimized for long lists
 
-  # you can add additional information to the About page, each line appears in a bulleted list
-  # about:
-  #   - I'm actually really cool 
-
   # about page - add personal details to about page if you like
   about:
     - Live long and prosper, loves \\//_
 
 # Build settings - add to your site's _config.yml
 # theme: jekyll-98
-
-# plugin settings
-jekyll-archives:
-  enabled: categories
-  layout: posts
 
 # defaults - probably don't touch
 defaults:
@@ -120,5 +114,6 @@ defaults:
       layout: "post"
   
 # don't touch
-include:
-  - _pages
+collections:
+  pages:
+    output: true
