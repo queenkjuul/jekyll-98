@@ -30,4 +30,9 @@
     font-family: 'Pixelated MS Sans Serif';
     margin-top: 8px;
   }
+
+  @include media-query($on-palm) {
+    margin: 16px 0px 0px 8px;
+    max-width: 72px;
+  }
 }
