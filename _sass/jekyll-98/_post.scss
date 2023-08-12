@@ -33,6 +33,8 @@
   }
 
   & img {
+    display: block;
+    max-height: 90vh;
     max-width: 75%;
     margin: auto;
   }
