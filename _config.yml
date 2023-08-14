@@ -12,6 +12,7 @@ description: > # > means to ignore newlines until next section
 # url:  https://jekyll-98.github.io             # will try to use github pages url if omitted
 
 #### SETTINGS - Sitewide preferences
+remote_theme: jekyll-98
 show_excerpts: true       # mostly works, see README
 show_categories: true
 paginate:      3          # set to a number of posts per page 
