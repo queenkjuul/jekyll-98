@@ -6,7 +6,7 @@
     {% if include.url == homeurl %}
       {% assign iconlink = homeicon %}
     {% endif %}
-    <img src="/assets/icons/{{ include.icon | default: 'document' }}.png" alt="{{ include.alt }}" />
+    <img src="{{ iconlink }}" alt="{{ include.alt }}" />
     <div class="start-menu-item__title">{{ include.title }}</div>
     <div class="start-menu-item__alt">{{ include.alt }}</div>
   </div>

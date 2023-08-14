@@ -1,31 +1,35 @@
-{%if page.paginator %}
+{% if page.paginator %}
   {% assign paginator = page.paginator %}
 {% endif %}
-{% if site.paginate %} 
-  {% assign posts = paginator.posts %} 
-{% else %} 
-  {% assign posts = site.posts %} 
+{% if site.paginate %}
+  {% assign posts = paginator.posts %}
+{% else %}
+  {% assign posts = site.posts %}
 {% endif %}
 
-{%- if posts.size > 0 -%} 
+{%- if posts.size > 0 -%}
   <ul class="post-list tree-view">
-    {%- assign date_format = site.jekyll-98.date_format | default: "%b %-d, %Y" -%} 
+    {%- assign date_format = site.jekyll-98.date_format | default: "%b %-d, %Y" -%}
     {%- for post in posts -%}
       {% assign icon = post.icon | default: "document" %}
       <li class="post-list-wrapper">
         <a class="post-list-item" href="{{ post.url | absolute_url }}">
-          <img class="post-list-icon" src="{{  "/assets/icons/" | append: icon | append: ".png" | absolute_url}}" alt="{{post.title}}" />
+          <img
+            class="post-list-icon"
+            src="{{  "/assets/icons/" | append: icon | append: ".png" | absolute_url}}"
+            alt="{{post.title}}" />
           <div class="post-link">{{ post.title | escape }}</div>
           <div class="post-meta">{{ post.date | date: date_format }}</div>
-          {%- if site.show_excerpts -%} 
-            <div class="post-excerpt">{{ post.excerpt | strip_html }}</div> 
+          {%- if site.show_excerpts -%}
+            <div class="post-excerpt">{{ post.excerpt | strip_html }}</div>
           {%- endif -%}
         </a>
         {%- if site.show_categories and post.categories.size > 0 -%}
           <div class="post-tags">
-            <div class="post-categories-label">Categories: </div>
-            {%for tag in post.categories %}
-              <a class="post-tag" href="{{"/category/" | append: tag | absolute_url }}">{{tag}}</a>
+            <div class="post-categories-label">Categories:
+            </div>
+            {% for tag in post.categories %}
+              <a class="post-tag" href="{{"/category/" | append: tag | append: "/" | absolute_url }}">{{ tag }}</a>
             {% endfor %}
           </div>
         {% else %}
@@ -38,24 +42,20 @@
   {% if site.paginate %}
     <div class="pager">
       {%- if paginator.previous_page %}
-          <a
-            href="{{ paginator.previous_page_path }}"
-            class="previous-page"
-            ><button>Page {{ paginator.previous_page }}</button></a
-          >
+        <a href="{{ paginator.previous_page_path }}" class="previous-page">
+          <button>Page {{ paginator.previous_page }}</button>
+        </a>
       {%- else %}
         <button class="pager-edge" disabled>First Page</button>
       {%- endif %}
-        <button class="current-page">{{ paginator.page }}</button>
+      <button class="current-page">{{ paginator.page }}</button>
       {%- if paginator.next_page %}
-        <a
-          href="{{ paginator.next_page_path }}"
-          class="next-page"
-          ><button>Page {{ paginator.next_page }}</button></a
-        >
+        <a href="{{ paginator.next_page_path }}" class="next-page">
+          <button>Page {{ paginator.next_page }}</button>
+        </a>
       {%- else %}
         <button class="pager-edge" disabled>Last Page</button>
       {%- endif %}
     </div>
-  {%- endif %} 
+  {%- endif %}
 {%- endif -%}
