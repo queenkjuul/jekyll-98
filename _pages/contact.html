@@ -2,3 +2,38 @@
 layout: default
 permalink: /contact.html
 ---
+
+{% capture contact_info %}
+  {% assign info = site.jekyll-98.contact %}
+  <div class="contact-title">
+    <img src="/assets/icons/contact.png" style="width: 48px; height: 48px;" />
+    <h4>Contact Information</h4>
+  </div>
+  <div class="contact-name">
+    <h4>{{ info.name }}</h4>
+    <h5>{{ info.email }}</h5>
+    {% if info.phone %}
+      <h5>{{ info.phone }}</h5>
+    {% endif %}
+  </div>
+  <div class="contact-address">
+    {% for line in info.address %}
+      <div class="address-line">{{ line }}</div>
+    {% endfor %}
+  </div>
+  <div class="contact-other">
+    <ul>
+      {% for line in info.other %}
+        <li class="other-line">{{ line }}</li>
+      {% endfor %}
+    </ul>
+  </div>
+  <div class="contact-social-wrapper">
+    {% include social.html showname=true hide_email=true %}
+  </div>
+{% endcapture %}
+
+<div class="contact-page">
+  {% include desktop_icons.html hide=true %}
+  {% include window.html class = "contact-window" title = "Contact Information" content=contact_info %}
+</div>

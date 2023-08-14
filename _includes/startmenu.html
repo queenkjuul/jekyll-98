@@ -49,12 +49,13 @@
         {%- endif -%}
       {%- endfor -%}
 
-      <!-- {% include start-menu-item.html 
-      url="/contact"
-      title="Contact Information"
-      icon="contact"
-      alt="How to contact the author"
-      %} -->
+      {% if site.jekyll-98.contact %}
+        {% include start-menu-item.html 
+         url = "/contact.html"
+         title = "Contact Information"
+         icon = "contact"
+         alt = "How to contact the author" %}
+      {% endif %}
 
       {% include start-menu-item.html 
        url = "/about.html"

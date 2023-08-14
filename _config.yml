@@ -1,4 +1,4 @@
-# plugins - be careful
+# plugins - be careful, shouldn't remove defaults
 plugins:
   - jekyll-paginate       # theme default
   - jekyll-category-pages # theme-default
@@ -55,6 +55,7 @@ jekyll-98:
     alt: 'This is an example' # alt text is shown in start menu - long strings won't wrap and might break menu
 
   # generate social links in footer
+  # only 5 will safely fit on small phones
   social_links:
     github:  queenkjuul
     youtube: queenkjuul69
@@ -93,23 +94,20 @@ jekyll-98:
   contact:        # comment to omit
     name: *name   # reuses values from above
     email: *email
-  # phone: phone number if you're spicy
-  # address: 
-    # - 1234 Street Avenue
-    # - Assigned living quarters number X
-    # - City, Unit bigger than city, country, postal related code 
-    # - You can actually add as many lines as your little heart desires
-  # other:
-  #   - custom info can go here
-  #   - each line gets rendered
-  #   - layout not optimized for long lists
+    phone: phone number if you're spicy 
+    address: 
+      - 1234 Street Avenue
+      - Assigned living quarters number X
+      - City, Unit bigger than city, country, postal related code 
+      - You can actually add as many lines as your little heart desires
+    other:
+      - custom info can go here
+      - each line gets rendered
+      - layout not optimized for long lists
 
   # about page - add personal details to about page if you like
   about:
     - Live long and prosper, loves \\//_
-
-# Build settings - add to your site's _config.yml
-# theme: jekyll-98
 
 # defaults - probably don't touch, except for category
 defaults:

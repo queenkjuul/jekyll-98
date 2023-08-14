@@ -4,11 +4,12 @@
   & .window {
     margin-bottom: 128px;
     margin-top: 16px;
-    max-width: 50%;
+    max-width: 66%;
 
     @include media-query($on-palm) {
-      margin-right: 0px;
-      max-width: 100%;
+      display: block;
+      margin: 16px auto 128px auto;
+      max-width: 96vw;
     }
   }
 

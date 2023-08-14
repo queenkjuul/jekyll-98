@@ -1,16 +1,18 @@
 # jekyll-98
 
-A theme for Jekyll built using the [XP.css](https://github.com/botoxparty/XP.css) fork of [98.css](https://github.com/jdan/98.css) which aims to recreate the aesthetics of Windows 98 in a usable, customizable blog format.
+A theme for Jekyll built using the [XP.css](https://github.com/botoxparty/XP.css) fork of [98.css](https://github.com/jdan/98.css) which aims to recreate the aesthetics of Windows 98 in a mobile-friendly, customizable blog format.
 
-*Almost* no JavaScript, but should work basically perfectly without. Easily extensible by reusing the provided `includes`. Easily customizable without extension.
+*Almost* no JavaScript, but should be perfectly usable without. Ships with pagination, atom feed generation, automatic social media links, and per-category index pages out of the box.
+
+![screenshot of jekyll-98](/assets/screenshot.png)
 
 ## Installation
 
 *WIP - Should be packaged as a gem soon*
 
-in your blog root folder, create a directory `_theme`
+in your blog root folder, create a directory `_themes`
 
-`cd` into `_theme` and clone this repo into it
+`cd` into `_themes` and clone this repo into it
 
 Add this line to your Jekyll site's `Gemfile`:
 
