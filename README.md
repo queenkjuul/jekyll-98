@@ -176,15 +176,11 @@ All available sites/icons are listed in the theme [`_config.yml`](https://github
 
 #### `contact`
 
-To use the contact page, you must copy the `_pages/contact.html` file into your site's root. 
-
 By default, the contact page will display the name and email set in the site config. Commenting/removing these lines will prevent the Contact page from being generated (and links to it will be removed)
 
 See [`_config.yml`](https://github.com/queenkjuul/jekyll-98/blob/master/_config.yml) for details on setting up additional info beyond name + email.
 
 #### `about`
-
-To use the About page, you must copy the `_pages/about.html` file into your site's root.
 
 You can add any info you like to the default About page. The About page will automatically include your site description. Additional lines defined in the `jekyll-98.about` array will appear in a bulleted list on the About page, below the description.
 
