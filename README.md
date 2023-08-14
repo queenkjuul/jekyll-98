@@ -10,7 +10,9 @@ A theme for Jekyll built using the [XP.css](https://github.com/botoxparty/XP.css
 
 ### Quick Start
 
-This repo is actually a fully functional jekyll site! You can clone or fork this repo, update the config with your own values, add some posts, et voila! You have a website ready to be hosted with Github Pages\* or built and served on your own host.
+This repo is actually a fully functional jekyll site! You can clone or fork this repo, update the config with your own values, add some posts, et voila! You have a website ready to be hosted with Github Pages or built and served on your own host.
+
+If you use this repo as a base, make sure your GitHub Repo > Settings > Pages > Source is set to "GitHub Actions." The `main` branch is deployed by default. Edit `.github/workflows/jekyll.yml` to change branches. [See note below about GitHub Actions](#github-pages--jekyll-remote-theme)
 
 ```sh
 git clone https://github.com/queenkjuul/jekyll-98
@@ -22,13 +24,15 @@ bundle exec jekyll build  # build
 
 ### GitHub Pages / jekyll-remote-theme
 
-\* **NOTE:** the "deploy from branch (classic)" GitHub Pages deployment method FAILS to generate category index pages. However, the default Jekyll GitHub Action works. [See instructions from GitHub here and set up your site's repo to publish with the default Jekyll workflow](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site#publishing-with-a-custom-github-actions-workflow)
-
 In your site's _config.yml, add:
 
 ```yml
 remote_theme: queenkjuul/jekyll-98
 ```
+
+**NOTE:** the "deploy from branch (classic)" GitHub Pages deployment method FAILS to generate category index pages. However, the default Jekyll GitHub Action works. [See instructions from GitHub here and set up your site's repo to publish with the default Jekyll workflow](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site#publishing-with-a-custom-github-actions-workflow). 
+
+Using the legacy "deploy from branch" option will not break the site, but it will break the [`desktop_categories`](#theme-settings) and [`show_categories`](#settings) functions
 
 ### Manual installation
 
@@ -126,7 +130,8 @@ Basic Jekyll/Pages info from the template, such as title, author, and descriptio
 ### Settings
 
 ```yaml
-show_excerpts:  false
+show_excerpts:  false       # show post excerpts in post lists
+show_categories:  true     # show category links in post lists - REQUIRES GITHUB ACTIONS TO WORK WITH GITHUB PAGES, SEE README
 paginate:       3           # set to false to disable, numbers above 3 might be weird on mobile
 paginate_path:  /page/:num  # change if you know what you're doing
 google_analytics: asdf1234  # your google analytics key
