@@ -30,9 +30,11 @@ In your site's _config.yml, add:
 remote_theme: queenkjuul/jekyll-98
 ```
 
+#### GitHub Pages Deployment
+
 **NOTE:** the "deploy from branch (classic)" GitHub Pages deployment method FAILS to generate category index pages. However, the default Jekyll GitHub Action works. [See instructions from GitHub here and set up your site's repo to publish with the default Jekyll workflow](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site#publishing-with-a-custom-github-actions-workflow). 
 
-Using the legacy "deploy from branch" option will not break the site, but it will break the [`desktop_categories`](#theme-settings) and [`show_categories`](#settings) functions
+Using the legacy "deploy from branch" option will not break the site, but it will break the [`desktop_categories`](#theme-settings) and [`show_categories`](#settings) functions. If they are left enabled, the site will build and deploy, but those links will lead to 404s, so it's best to disable them.
 
 ### Manual installation
 
@@ -88,6 +90,7 @@ excerpt: this is what will show on the home page (if show_excerpts is enabled)
 If you add `{:.tree-view}` before your bulleted lists, they will render in Windows Explorer-style tree view mode. I'd like to do this automatically, but I don't know how to apply a class automatically to the kramdown/jekyll output. If you know how, get in touch! Open an issue, raise a PR, or (please don't really) email me.
 
 Example:
+
 ```md
 {:.tree-view}
  - First Item
@@ -109,8 +112,8 @@ You will want to define the following in your posts' front matter:
   - `layout: post` - you probably want to leave this
   - `date: YYYY-MM-DD HH:MM:SS +/-0000` - time zone offset at end. Only for internal use, actual formatted date shown to users is formatted per `jekyll-98.date_format` in `_config.yml`
 - Optional
-  - `categories: string1 string2 ...` - space-separated list of post categories. Posts can be browsed by category with links on the homepage
-  - `icon: icon_string` - `icon_string` is the filename of any icon in the jekyll-98 `assets/icons` folder, minus the extension (so omit `.png`). Optional. Unfortunately for now, can't be automatically set by category. Will appear in any post list (homepage, /posts, /categories)
+  - `categories: string1 string2 ...` - space-separated list of post categories. Posts can be browsed by category with links on the homepage. Uses [jekyll-category-pages](https://github.com/field-theory/jekyll-category-pages).
+  - `icon: icon_string` - `icon_string` is the filename of any icon in the jekyll-98 `assets/icons` folder, minus the extension (so omit `.png`). Optional. Unfortunately for now, can't be automatically set by category. Will appear in any post list.
   - `excerpt: string` - excerpt to be shown in post lists if excerpts is enabled in `_config.yml`. If not defined, jekyll will use the first paragraph of your post.
 
 ## Configuration
@@ -139,6 +142,8 @@ google_analytics: asdf1234  # your google analytics key
 
 Enabling excerpts will show the first bit of a post on the home page. This can be a little unreliable with the layout of the posts list, so either disable (default) or experiment. You can define an explicit excerpt (instead of letting Jekyll guess) by defining `excerpt` in the post's front matter (see [Posts](#posts))
 
+`show_categories` is NOT compatible with the default "deploy from a branch" GitHub Pages deployment method. Instead, [use a GitHub Action](#github-pages-deployment)
+
 ### Theme settings
 
 Theme settings are defined within the `jekyll-98` node of your _config.yml
@@ -163,6 +168,8 @@ you can define a different icon to use for the "my computer" homepage icon on th
 #### `desktop_categories`
 
 Categories defined in this array will generate desktop icons and start menu links, assuming there are posts that exist that are tagged with that category. Note that things might get weird layout wise if you have more than 5-7 desktop icons total (`desktop_categories` and `site_links` combined)
+
+Not compatible with the default "Deploy from a branch" GitHub Pages deployment method. [Use the default Jekyll deployment Action instead](#github-pages-deployment)
 
 #### `site_links`
 
@@ -207,7 +214,6 @@ To add a custom directory to your theme-gem, please edit the regexp in `jekyll-9
 ## License
 
 The theme is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
-
 
 social icons from https://github.com/edent/SuperTinyIcons
 
