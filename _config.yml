@@ -1,9 +1,4 @@
-# plugins - be careful, shouldn't remove defaults
-plugins:
-  - jekyll-paginate       # theme default
-  - jekyll-category-pages # theme-default
-  - jekyll-feed           # theme-default
-
+####  GLOBAL - Site information
 # About your website
 title: Your awesome title
 author: # *** NAME AND EMAIL INCLUDED IN RSS FEED BY DEFAULT ***
@@ -14,35 +9,36 @@ description: > # > means to ignore newlines until next section
   line in _config.yml. It will appear in your document head meta (for
   Google search results) and in your feed.xml site description. 
   It will also appear on the site About page. 
-# url:  http://yourdomain.com             # will try to use github pages url if omitted
+# url:  https://jekyll-98.github.io             # will try to use github pages url if omitted
 
-# settings
-show_excerpts: true      # mostly works, see README
+#### SETTINGS - Sitewide preferences
+show_excerpts: true       # mostly works, see README
 show_categories: true
 paginate:      3          # set to a number of posts per page 
-                          # only 3 works well on mobile
+                          # only 3 works well on small mobile screens
                           # set to false to disable pagination (all posts listed on home page)
 paginate_path: /page/:num # probably shouldn't touch
 # google_analytics:       # input your google analytics key for tracking
 
-# theme settings
+#### THEME - Controls for desktop and extra pages
 jekyll-98:
   date_format: "%b %-d, %Y" # refer to https://shopify.github.io/liquid/filters/date/ if you want to customize this
 
+  ### SITE ICON
   # select site icon which will be used for homepage links 
   # on the desktop and in the start menu
-  # will also appear on site About page 
   # see assets/icons for choices, omit extension
-  
-  # icon: computer-2k
+  icon: computer
 
+  ### DESKTOP FOLDERS
   # select which of your post categories should have its own desktop icon
   # should probably try and keep total icons (desktop_categories and site_links)
   # to 7 or less total
   desktop_categories:
     - posts
 
-  # site_links generate desktop icons (home page and post pages if device width allows)
+  ### DESKTOP / START MENU LINKS
+  # site_links generate desktop icons (if device width allows)
   # as well as entries in the Start menu (all widths)
   # must have at least title and url
   # icon will default to "document"
@@ -54,6 +50,24 @@ jekyll-98:
     icon: html                # optional
     alt: 'This is an example' # alt text is shown in start menu - long strings won't wrap and might break menu
 
+  ### CONTACT PAGE
+  # social links from the social_links section are automatically added to contact page (if enabled)
+  # only defined fields are displayed
+  contact:        # comment to omit page altogether
+    name: *name   # reuses values from above
+    email: *email
+    phone: phone number if you're spicy 
+    address: 
+      - 1234 Street Avenue
+      - Assigned living quarters number X
+      - City, Unit bigger than city, country, postal related code 
+      - You can actually add as many lines as your little heart desires
+    other:
+      - custom info can go here
+      - each line gets rendered
+      - layout not optimized for long lists
+
+  ### SOCIAL MEDIA / QUICK LAUNCH
   # generate social links in footer
   # only 5 will safely fit on small phones
   social_links:
@@ -89,27 +103,19 @@ jekyll-98:
     # - username: jekyll2
     #   instance: example.com
 
-  # social links from the social_links section are automatically added to contact page (if enabled)
-  # only defined fields are shown
-  contact:        # comment to omit
-    name: *name   # reuses values from above
-    email: *email
-    phone: phone number if you're spicy 
-    address: 
-      - 1234 Street Avenue
-      - Assigned living quarters number X
-      - City, Unit bigger than city, country, postal related code 
-      - You can actually add as many lines as your little heart desires
-    other:
-      - custom info can go here
-      - each line gets rendered
-      - layout not optimized for long lists
-
-  # about page - add personal details to about page if you like
+  ### ABOUT PAGE
+  # add personal details to about page if you like
+  # lines are rendered as bulleted list
   about:
     - Live long and prosper, loves \\//_
 
-# defaults - probably don't touch, except for category
+#### PLUGINS - Add what you need, but don't remove defaults!
+plugins:
+  - jekyll-paginate       # theme default
+  - jekyll-category-pages # theme-default
+  - jekyll-feed           # theme-default
+
+#### DEFAULTS - Only for theme website, you can ignore/remove
 defaults:
   -
     scope:
@@ -118,8 +124,3 @@ defaults:
       layout: "post"
       categories:
         - posts
-  
-# don't touch
-collections:
-  pages:
-    output: true
