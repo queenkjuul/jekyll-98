@@ -7,7 +7,7 @@
       class="social-icon"
       href="mailto:{{ site.author.email | cgi_escape | escape }}"
       title="{{ site.author.email | escape }}">
-      <img src="/assets/social/Mail.png" />
+      <img src="{{ "/assets/social/Mail.png" | absolute_url }}" />
       {% if include.showname %}
         {{ site.author.email }}
       {%- endif -%}
@@ -21,7 +21,7 @@
     rel="me"
     href="https://github.com/{{ social.github | cgi_escape | escape }}"
     title="{{ social.github | escape }}">
-    <img src="/assets/social/github.svg" />
+    <img src="{{ "/assets/social/github.svg" | absolute_url }}" />
     {% if include.showname %}
       {{ social.github }}
     {% endif %}
@@ -35,7 +35,7 @@
       rel="me"
       href="https://{{ glb.instance | cgi_escape | escape}}/{{glb.username}}"
       title="{{ glb.username | escape }}">
-      <img src="/assets/social/gitlab.svg" />
+      <img src="{{ "/assets/social/gitlab.svg" | absolute_url }}" />
       {% if include.showname %}
         {{ glb.username }}
       {% endif %}
@@ -49,7 +49,7 @@
     rel="me"
     href="https://www.instagram.com/{{ social.instagram | cgi_escape | escape }}"
     title="{{ social.instagram | escape }}">
-    <img src="/assets/social/instagram.svg" />
+    <img src="{{ "/assets/social/instagram.svg" | absolute_url }}" />
     {% if include.showname %}
       {{ social.instagram }}
     {% endif %}
@@ -62,7 +62,7 @@
     rel="me"
     href="https://twitter.com/{{ social.twitter | cgi_escape | escape }}"
     title="{{ social.twitter | escape }}">
-    <img src="/assets/social/twitter.svg" />
+    <img src="{{ "/assets/social/twitter.svg" | absolute_url }}" />
     {% if include.showname %}
       {{ social.twitter }}
     {% endif %}
@@ -75,7 +75,7 @@
     rel="me"
     href="https://twitch.com/{{ social.twitch | cgi_escape | escape }}"
     title="{{ social.twitch | escape }}">
-    <img src="/assets/social/twitch.svg" />
+    <img src="{{ "/assets/social/twitch.svg" | absolute_url }}" />
     {% if include.showname %}
       {{ social.twitch }}
     {% endif %}
@@ -88,7 +88,7 @@
     rel="me"
     href="https://www.youtube.com/{{ social.youtube | cgi_escape | escape }}"
     title="{{ social.youtube | escape }}">
-    <img src="/assets/social/youtube.svg" />
+    <img src="{{ "/assets/social/youtube.svg" | absolute_url }}" />
     {% if include.showname %}
       {{ social.youtube }}
     {% endif %}
@@ -100,7 +100,7 @@
     class="social-icon"
     rel="me"
     href="https://www.youtube.com/channel/{{ social.youtube_channel | cgi_escape | escape }}"
-    title="{{ social.youtube_channel_name | escape | default: 'YouTube' }}"><img src="/assets/social/youtube.svg" />
+    title="{{ social.youtube_channel_name | escape | default: 'YouTube' }}"><img src="{{ "/assets/social/youtube.svg" | absolute_url }}" />
     {% if include.showname %}
       {{ social.youtube_channel_name }}
     {% endif %}
@@ -112,7 +112,7 @@
     class="social-icon"
     rel="me"
     href="https://www.facebook.com/{{ social.facebook | cgi_escape | escape }}"
-    title="{{ social.facebook | escape }}"><img src="/assets/social/facebook.svg" />
+    title="{{ social.facebook | escape }}"><img src="{{ "/assets/social/facebook.svg" | absolute_url }}" />
     {% if include.showname %}
       {{ social.facebook }}
     {% endif %}
@@ -124,7 +124,7 @@
     class="social-icon"
     rel="me"
     href="https://www.linkedin.com/in/{{ social.linkedin | cgi_escape | escape }}"
-    title="{{ social.linkedin | escape }}"><img src="/assets/social/linkedin.svg" />
+    title="{{ social.linkedin | escape }}"><img src="{{ "/assets/social/linkedin.svg" | absolute_url }}" />
     {% if include.showname %}
       {{ social.linkedin }}
     {% endif %}
@@ -136,7 +136,7 @@
     class="social-icon"
     rel="me"
     href="https://stackoverflow.com/users/{{ social.stackoverflow | cgi_escape | escape }}"
-    title="{{ social.stackoverflow | escape }}"><img src="/assets/social/stackoverflow.svg" />
+    title="{{ social.stackoverflow | escape }}"><img src="{{ "/assets/social/stackoverflow.svg" | absolute_url }}" />
     {% if include.showname %}
       {{ social.stackoverflow }}
     {% endif %}
@@ -148,7 +148,7 @@
     class="social-icon"
     rel="me"
     href="https://dribbble.com/{{ social.dribbble | cgi_escape | escape }}"
-    title="{{ social.dribbble | escape }}"><img src="/assets/social/dribble.svg" />
+    title="{{ social.dribbble | escape }}"><img src="{{ "/assets/social/dribble.svg" | absolute_url }}" />
     {% if include.showname %}
       {{ social.dribbble }}
     {% endif %}
@@ -160,7 +160,7 @@
     class="social-icon"
     rel="me"
     href="https://www.flickr.com/photos/{{ social.flickr | cgi_escape | escape }}"
-    title="{{ social.flickr | escape }}"><img src="/assets/social/flickr.svg" />
+    title="{{ social.flickr | escape }}"><img src="{{ "/assets/social/flickr.svg" | absolute_url }}" />
     {% if include.showname %}
       {{ social.flickr }}
     {% endif %}
@@ -172,7 +172,7 @@
     class="social-icon"
     rel="me"
     href="https://www.pinterest.com/{{ social.pinterest | cgi_escape | escape }}"
-    title="{{ social.pinterest | escape }}"><img src="/assets/social/pinterest.svg" />
+    title="{{ social.pinterest | escape }}"><img src="{{ "/assets/social/pinterest.svg" | absolute_url }}" />
     {% if include.showname %}
       {{ social.pinterest }}
     {% endif %}
@@ -185,7 +185,7 @@
       class="social-icon"
       rel="me"
       href="https://{{ mst.instance | cgi_escape | escape}}/@{{mst.username}}"
-      title="{{ mst.username | escape }}"><img src="/assets/social/mastodon.svg" />
+      title="{{ mst.username | escape }}"><img src="{{ "/assets/social/mastodon.svg" | absolute_url }}" />
       {% if include.showname %}
         {{ mst.username }}
       {% endif %}
@@ -198,7 +198,7 @@
     class="social-icon"
     rel="me"
     href="https://t.me/{{ social.telegram | cgi_escape | escape }}"
-    title="{{ social.telegram | escape }}"><img src="/assets/social/telegram.svg" />
+    title="{{ social.telegram | escape }}"><img src="{{ "/assets/social/telegram.svg" | absolute_url }}" />
     {% if include.showname %}
       {{ social.telegram }}
     {% endif %}
@@ -210,7 +210,7 @@
     class="social-icon"
     rel="me"
     href="https://keybase.io/{{ social.keybase | cgi_escape | escape }}"
-    title="{{ social.keybase | escape }}"><img src="/assets/social/keybase.svg" />
+    title="{{ social.keybase | escape }}"><img src="{{ "/assets/social/keybase.svg" | absolute_url }}" />
     {% if include.showname %}
       {{ social.keybase }}
     {% endif %}
@@ -222,7 +222,7 @@
     class="social-icon"
     href="https://dev.to/{{ social.devto | cgi_escape | escape }}"
     title="{{ social.devto | escape }}">
-    <img src="/assets/social/devto.svg" />
+    <img src="{{ "/assets/social/devto.svg" | absolute_url }}" />
     {% if include.showname %}
       {{ social.devto }}
     {% endif %}

@@ -10,7 +10,7 @@
     class="window"
     aria-label="Start"
     for="start">
-    <img src="/assets/icons/start.png" />
+    <img src="{{ "/assets/icons/start.png" | absolute_url }}" />
     Start
   </label>
   <input type="checkbox" id="start" />
@@ -19,8 +19,9 @@
     <div class="start-menu-banner"></div>
 
     <div>
+      {% assign homelink = "/" | absolute_url %}
       {% include start-menu-item.html 
-       url = "/"
+       url = homelink
        title=site.title
        icon=site.jekyll-98.icon
        alt = "Go back to homepage" %}
@@ -29,7 +30,7 @@
         {% assign category_exists = site.categories[category] %}
         {% if category_exists.size > 0 %}
           {% assign label = category | capitalize %}
-          {% assign href = "/category/" | append: category %}
+          {% assign href = "/category/" | append: category | absolute_url %}
           {% assign alt_text = "Browse posts tagged " | append: category %}
           {% include start-menu-item.html
            url=href
@@ -50,13 +51,15 @@
       {%- endfor -%}
 
       {% if site.jekyll-98.contact %}
+        {% assign contactlink = "/contact.html" | absolute_url %}
         {% include start-menu-item.html 
-         url = "/contact.html"
+         url = contactlink
          title = "Contact Information"
          icon = "contact"
          alt = "How to contact the author" %}
       {% endif %}
 
+      {% assign aboutlink = "/about.html" | absolute_url %}
       {% include start-menu-item.html 
        url = "/about.html"
        title = "About"

@@ -3,9 +3,10 @@
 {% endif %}
 <aside class="{{ hide_on_phone }}">
   <nav class="desktop-icons">
-    <a href="/">
+    <a href="{{ "/" | absolute_url}}">
       <div class="desktop-icon">
-        <img src="/assets/icons/{{ site.jekyll-98.icon | default:'computer' }}.png" alt="Computer Icon Click To Go Home" />
+        {% capture iconlink %}/assets/icons/{{ site.jekyll-98.icon | default: 'computer' }}.png{% endcapture %}
+        <img src="{{ iconlink | absolute_url }}" alt="Computer Icon Click To Go Home" />
         <figcaption>{{ site.title }}</figcaption>
       </div>
     </a>
@@ -13,9 +14,9 @@
     {% for category in site.jekyll-98.desktop_categories %}
       {% assign category_exists = site.categories[category] %}
       {% if category_exists.size > 0 %}
-        <a href="/category/{{ category }}">
+        <a href="{{ "/category/" | append: category | absolute_url }}">
           <div class="desktop-icon">
-            <img src="/assets/icons/documents.png" alt="Folder icon click to go to see {{ category }} posts" />
+            <img src="{{ "/assets/icons/documents.png" | absolute_url }}" alt="Folder icon click to go to see {{ category }} posts" />
             <figcaption>{{ category | capitalize }}</figcaption>
           </div>
         </a>
@@ -26,7 +27,8 @@
       {%- if icon.title and icon.url -%}
         <a href="{{ icon.url }}" target="{{ icon.target }}">
           <div class="desktop-icon">
-            <img src="/assets/icons/{{ icon.icon | default:'document' }}.png" alt="{{ icon.alt }}" />
+            {% capture iconlink %}/assets/icons/{{ icon.icon | default: 'document' }}.png{% endcapture %}
+            <img src={{ iconlink | absolute_url }} alt="{{ icon.alt }}" />
             <figcaption>{{ icon.title }}</figcaption>
           </div>
         </a>

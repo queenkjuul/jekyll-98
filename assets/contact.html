@@ -7,8 +7,9 @@ permalink: /contact.html
   {% assign info = site.jekyll-98.contact %}
   {{ site.url }}
   {{ site.baseurl }}
+  {{ "/" | absolute_url}}
   <div class="contact-title">
-    <img src="/assets/icons/contact.png" style="width: 48px; height: 48px;" />
+    <img src="{{ "/assets/icons/contact.png" | absolute_url }}" style="width: 48px; height: 48px;" />
     <h4>Contact Information</h4>
   </div>
   <div class="contact-name">

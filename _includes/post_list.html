@@ -13,8 +13,8 @@
     {%- for post in posts -%}
       {% assign icon = post.icon | default: "document" %}
       <li class="post-list-wrapper">
-        <a class="post-list-item" href="{{ post.url | relative_url }}">
-          <img class="post-list-icon" src="/assets/icons/{{ icon }}.png" alt="{{post.title}}" />
+        <a class="post-list-item" href="{{ post.url | absolute_url }}">
+          <img class="post-list-icon" src="{{  "/assets/icons/" | append: icon | append: ".png" | absolute_url}}" alt="{{post.title}}" />
           <div class="post-link">{{ post.title | escape }}</div>
           <div class="post-meta">{{ post.date | date: date_format }}</div>
           {%- if site.show_excerpts -%} 
@@ -25,7 +25,7 @@
           <div class="post-tags">
             <div class="post-categories-label">Categories: </div>
             {%for tag in post.categories %}
-              <a class="post-tag" href="/category/{{tag}}">{{tag}}</a>
+              <a class="post-tag" href="{{"/category/" | append: tag | absolute_url }}">{{tag}}</a>
             {% endfor %}
           </div>
         {% else %}
