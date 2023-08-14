@@ -2,7 +2,9 @@
   {% assign hide_on_phone = "hide-on-phone" | default: "" %}
 {% endif %}
 <aside class="{{ hide_on_phone }}">
-  {{ site.github | jsonify }}
+  {% if site.github %}
+    {{ site.github | jsonify }}
+  {% endif %}
   <nav class="desktop-icons">
     <a href="{{ "/" | absolute_url}}">
       <div class="desktop-icon">
