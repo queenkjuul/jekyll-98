@@ -46,12 +46,6 @@ Using the legacy "deploy from branch" option will not break the site, but it wil
 theme: jekyll-98
 ```
 
-Or install it yourself as:
-
-```sh
-gem install jekyll-98
-```
-
 ## Usage
 
 Theme should provide sane defaults, but there's lots to customize. For full configuration options, refer to [_config.yml](https://github.com/queenkjuul/jekyll-98/blob/main/_config.yml). Add whatever settings you want *to your site's _config.yml*.
