@@ -40,28 +40,10 @@ Using the legacy "deploy from branch" option will not break the site, but it wil
 
 ### Manual installation
 
-*WIP - Should be packaged as a gem soon*
-
-in your blog root folder, create a directory `_themes`
-
-`cd` into `_themes` and clone this repo into it
-
-Add this line to your Jekyll site's `Gemfile`:
-
-```ruby
-gem "jekyll-98", :path => "_themes"
-```
-
-And add this line to your Jekyll site's `_config.yml`:
+`jekyll-98` is now available as a standard `gem` theme. You can install it to your site with `bundle add jekyll-98` and add this line to your Jekyll site's `_config.yml`:
 
 ```yaml
 theme: jekyll-98
-```
-
-And then execute:
-
-```sh
-bundle
 ```
 
 Or install it yourself as:
