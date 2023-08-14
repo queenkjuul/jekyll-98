@@ -4,7 +4,7 @@ A theme for Jekyll built using the [XP.css](https://github.com/botoxparty/XP.css
 
 *Almost* no JavaScript, but should be perfectly usable without. Ships with pagination, atom feed generation, automatic social media links, and per-category index pages out of the box.
 
-![screenshot of jekyll-98](https://github.com/queenkjuul/jekyll-98/blob/929a7ed273ae3aba076b2845a865487d4022bb36/assets/screenshot.png?raw=true)
+![screenshot of jekyll-98](https://raw.githubusercontent.com/queenkjuul/jekyll-98/main/assets/screenshot.png)
 
 ## Installation
 
@@ -70,7 +70,7 @@ gem install jekyll-98
 
 ## Usage
 
-Theme should provide sane defaults, but there's lots to customize. For full configuration options, refer to [_config.yml](https://github.com/queenkjuul/jekyll-98/blob/master/_config.yml). Add whatever settings you want *to your site's _config.yml*.
+Theme should provide sane defaults, but there's lots to customize. For full configuration options, refer to [_config.yml](https://github.com/queenkjuul/jekyll-98/blob/main/_config.yml). Add whatever settings you want *to your site's _config.yml*.
 
 ### Posts
 
@@ -186,13 +186,13 @@ jekyll-98:
 
 #### `social_links`
 
-All available sites/icons are listed in the theme [`_config.yml`](https://github.com/queenkjuul/jekyll-98/blob/master/_config.yml). Define a username, and the site will appear in the taskbar, as well as the Contact page (if enabled)
+All available sites/icons are listed in the theme [`_config.yml`](https://github.com/queenkjuul/jekyll-98/blob/main/_config.yml). Define a username, and the site will appear in the taskbar, as well as the Contact page (if enabled)
 
 #### `contact`
 
 By default, the contact page will display the name and email set in the site config. Commenting/removing these lines will prevent the Contact page from being generated (and links to it will be removed)
 
-See [`_config.yml`](https://github.com/queenkjuul/jekyll-98/blob/master/_config.yml) for details on setting up additional info beyond name + email.
+See [`_config.yml`](https://github.com/queenkjuul/jekyll-98/blob/main/_config.yml) for details on setting up additional info beyond name + email.
 
 #### `about`
 
