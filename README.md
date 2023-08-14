@@ -4,7 +4,7 @@ A theme for Jekyll built using the [XP.css](https://github.com/botoxparty/XP.css
 
 *Almost* no JavaScript, but should be perfectly usable without. Ships with pagination, atom feed generation, automatic social media links, and per-category index pages out of the box.
 
-![screenshot of jekyll-98](https://github.com/queenkjuul/jekyll-98/blob/929a7ed273ae3aba076b2845a865487d4022bb36/assets/screenshot.png)
+![screenshot of jekyll-98](https://github.com/queenkjuul/jekyll-98/blob/929a7ed273ae3aba076b2845a865487d4022bb36/assets/screenshot.png?raw=true)
 
 ## Installation
 
