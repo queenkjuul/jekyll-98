@@ -19,7 +19,6 @@ paginate:      3          # set to a number of posts per page
                           # only 3 works well on small mobile screens
                           # set to false to disable pagination (all posts listed on home page)
 paginate_path: /page/:num # probably shouldn't touch
-permalink: pretty         # needed for category index pages
 # google_analytics:       # input your google analytics key for tracking
 
 #### THEME - Controls for desktop and extra pages
