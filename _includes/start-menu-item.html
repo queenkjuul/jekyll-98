@@ -1,16 +1,12 @@
 <a href="{{ include.url }}">
   <div class="start-menu-item">
-    {% if include.url == "/" %}
-    <img
-      src="/assets/icons/{{ include.icon | default: 'computer' }}.png"
-      alt="{{ include.alt }}"
-    />
-    {% else %}
-    <img
-      src="/assets/icons/{{ include.icon | default: 'document' }}.png"
-      alt="{{ include.alt }}"
-    />
+    {% assign homeurl = "/" | absolute_url %}
+    {% assign homeicon = "/assets/icons/" | append: site.jekyll-98.icon | default: 'computer' | append: ".png" | absolute_url %}
+    {% assign iconlink = include.icon | default: 'document' | prepend: "/assets/icons/" | append: ".png" | absolute_url %}
+    {% if include.url == homeurl %}
+      {% assign iconlink = homeicon %}
     {% endif %}
+    <img src="/assets/icons/{{ include.icon | default: 'document' }}.png" alt="{{ include.alt }}" />
     <div class="start-menu-item__title">{{ include.title }}</div>
     <div class="start-menu-item__alt">{{ include.alt }}</div>
   </div>
