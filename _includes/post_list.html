@@ -29,6 +29,11 @@
             <div class="post-categories-label">Categories:
             </div>
             {% for tag in post.categories %}
+              {% if site.github %}
+                {% assign link = tag %}
+              {% else %}
+                {% assign link = "/category/" | append: tag | append: "/" | absolute_url %}
+              {% endif %}
               <a class="post-tag" href="{{"/category/" | append: tag | append: "/" | absolute_url }}">{{ tag }}</a>
             {% endfor %}
           </div>
