@@ -8,6 +8,28 @@ A theme for Jekyll built using the [XP.css](https://github.com/botoxparty/XP.css
 
 ## Installation
 
+### Quick Start
+
+This repo is actually a fully functional jekyll site! You can clone or fork this repo, update the config with your own values, add some posts, et voila! You have a website ready to be hosted with Github Pages or built and served on your own host.
+
+```sh
+git clone https://github.com/queenkjuul/jekyll-98
+cd jekyll-98
+bundle
+bundle exec jekyll serve  # preview
+bundle exec jekyll build  # build
+```
+
+### GitHub Pages / jekyll-remote-theme
+
+In your site's _config.yml, add:
+
+```yml
+remote_theme: queenkjuul/jekyll-98
+```
+
+### Manual installation
+
 *WIP - Should be packaged as a gem soon*
 
 in your blog root folder, create a directory `_themes`
@@ -28,30 +50,15 @@ theme: jekyll-98
 
 And then execute:
 
-    $ bundle
+```sh
+bundle
+```
 
 Or install it yourself as:
 
-    $ gem install jekyll-98
-
-### Static pages
-
-As far as I can tell, I can't generate extra pages within the theme and have them appear in the root of your website. Thus, extra generated pages, like the 404, About, and Contact pages, need to be manually added to your site. Simply copy whichever pages you wish to include in your site out of the `_pages` folder of this repo and into the root of your own repo. If you don't do this with 404.md, you will get a default 404 page, see below
-
-#### 404.md
-
-- **If you're using GitHub Pages and a *.github.io domain:**
-  - Ignore this, github.io pages *always* use the GitHub 404
-- **If you're self-hosting or using a GitHub Pages Custom Domain:**
-  - You will need to copy 404.md into the root of your site repo or else you will only get your server's standard 404 page
-
-#### contact.html
-
-Page will list author name and email as defined in the top level of your site's `_config.yml` (`site.author.email, site.author.name`), as well as any additional contact fields you wish to define in `jekyll-98.contact`, see [contact](#contact). 
-
-#### about.html
-
-Page will list authorship information and links for the theme, as well as your site's title and description, plus any additional fields you define in `jekyll-98.about`, see [about](#about).
+```sh
+gem install jekyll-98
+```
 
 ## Usage
 
