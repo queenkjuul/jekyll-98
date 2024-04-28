@@ -1,6 +1,6 @@
 # jekyll-98
 
-[***See it in action right here!***](https://queenkjuul.github.io/jekyll-98/)
+[***See it in action right here!***](https://jekyll-98.github.io/)
 
 A theme for Jekyll built using the [XP.css](https://github.com/botoxparty/XP.css) fork of [98.css](https://github.com/jdan/98.css) which aims to recreate the aesthetics of Windows 98 in a mobile-friendly, customizable blog format.
 
