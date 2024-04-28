@@ -28,6 +28,14 @@
     font-size: 1rem;
   }
 
+  & ul.tree-view a {
+    text-decoration: underline;
+    
+    &:hover {
+      color: blue
+    }
+  }
+
   & h1, h2, h3, h4, h5, h6 {
     margin-top: 16px;
     margin-bottom: 8px;
@@ -43,6 +51,7 @@
   & p {
     margin-top: 12px;
     margin-bottom: 12px;
+    line-height: 1.3rem;
   }
 
   & code {

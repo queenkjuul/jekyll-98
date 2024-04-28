@@ -7,6 +7,12 @@
     position: relative;
     top: 2px;
   }
+
+  &-text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
 }
 
 .error {

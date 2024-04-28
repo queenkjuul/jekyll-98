@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="{{ page.lang | default: site.lang | default: "end" }}">
+<html lang="{{ page.lang | default: site.lang | default: 'end' }}">
+<title>{{site.title}} {{ " " }}{%- if page.title -%} - {{page.title}}{%- endif -%}</title>
 
   {%- include head.html -%}
   
