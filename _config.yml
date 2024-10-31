@@ -25,6 +25,8 @@ paginate_path: /page/:num # probably shouldn't touch
 jekyll-98:
   date_format: "%b %-d, %Y" # refer to https://shopify.github.io/liquid/filters/date/ if you want to customize this
 
+  add_titles: false # you probably want this, it's only useful for my own website to turn it on
+
   ### SITE ICON
   # select site icon which will be used for homepage links 
   # on the desktop and in the start menu

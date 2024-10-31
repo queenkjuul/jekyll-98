@@ -1,28 +1,26 @@
 ---
 layout: default
 ---
+
 {% capture window_content %}
 <div class="post-content window-body">
+  {% if site.jekyll-98.add_titles %}
   <h1>{{page.title}}</h1>
-  {{content}}
+  {% endif %} {{content}}
+</div>
+{% endcapture %} {% capture status_bar_content %}
+<div class="status-bar">
+  <div class="status-bar-field status-bar-date">
+    {%- assign date_format = site.jekyll-98.date_format | default: "%b %-d, %Y"
+    -%} {{ page.date | date: date_format }}
+  </div>
+  {% for category in page.categories %}
+  <div class="status-bar-field">{{category}}</div>
+  {% endfor %}
 </div>
 {% endcapture %}
 
-{% capture status_bar_content %}
-  <div class="status-bar">
-    <div class="status-bar-field status-bar-date">
-      {%- assign date_format = site.jekyll-98.date_format | default: "%b %-d, %Y" -%} 
-      {{ page.date | date: date_format }}
-    </div>
-    {% for category in page.categories %}
-      <div class="status-bar-field">
-        {{category}}
-      </div>
-    {% endfor %}
-  </div>
-{% endcapture %}
-
 <div class="post-page">
-  {% include desktop_icons.html hide=true %}
-  {% include window.html title=page.title content=window_content statusbar=status_bar_content %}
+  {% include desktop_icons.html hide=true %} {% include window.html
+  title=page.title content=window_content statusbar=status_bar_content %}
 </div>
