@@ -1,36 +1,48 @@
 /**
  * Reset some basic elements
  */
-body, h1, h2, h3, h4, h5, h6,
-p, blockquote, pre, hr,
-dl, dd, ol, ul, figure {
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+hr,
+dl,
+dd,
+ol,
+ul,
+figure {
   margin: 0;
   padding: 0;
   font-size: 1rem;
-} 
+}
 
 .window {
-
   & h1 {
     font-size: 2rem;
   }
-  
+
   & h2 {
     font-size: 1.6rem;
   }
-  
+
   & h3 {
     font-size: 1.4rem;
   }
-  
+
   & h4 {
     font-size: 1.2rem;
   }
-  
+
   & h5 {
     font-size: 1.1rem;
   }
-  
+
   & h6 {
     font-size: 1rem;
   }
@@ -45,6 +57,10 @@ dl, dd, ol, ul, figure {
 ul {
   margin-left: 16px;
   margin-top: 8px;
+}
+
+ol {
+  margin-left: 16px;
 }
 
 li {
