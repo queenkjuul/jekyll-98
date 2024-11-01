@@ -32,6 +32,30 @@ In your site's _config.yml, add:
 remote_theme: queenkjuul/jekyll-98
 ```
 
+You will need a `_config.yml` file in the root of your deployment branch as well. All it needs to contain is:
+
+```yaml
+defaults:
+  - scope:
+      path: "" # an empty string here means all files in the project
+    values:
+      layout: "post"
+```
+
+Without this, your README.md file will not use any particular layout, and will just render plain text onto an empty desktop. For a more complete example, see [here](https://github.com/queenkjuul/spotify97/blob/main/_config.yml)
+
+If you are not adding your own social media links to `_config.yml` then you will also need to add this:
+
+```yaml
+jekyll-98:
+  social_links:
+    github: false
+    youtube: false
+    twitch: false
+```
+
+Otherwise, my own socials will appear on your site :cringe: (if anyone knows a better way to override these by default let me know)
+
 #### GitHub Pages Deployment
 
 **NOTE:** the "deploy from branch (classic)" GitHub Pages deployment method FAILS to generate category index pages. However, the default Jekyll GitHub Action works. [See instructions from GitHub here and set up your site's repo to publish with the default Jekyll workflow](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site#publishing-with-a-custom-github-actions-workflow). 
